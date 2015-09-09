@@ -11,7 +11,7 @@
 #import "CollectionCell.h"
 #import "ListDataModel.h"
 #import "UIImageView+WebCache.h"
-@interface CustomCollectionView ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface CustomCollectionView ()<UICollectionViewDataSource,UICollectionViewDelegate,WaterFlowLayoutDelegate>
 @property(nonatomic,strong)NSMutableArray * listData;
 @property(nonatomic,weak)UICollectionView * collectionView;
 @end
@@ -31,6 +31,7 @@ static NSString * const CellID = @"CellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     WaterFlowLayout  * flowLayout = [[WaterFlowLayout alloc] init];
+    flowLayout.delegate = self;
     UICollectionView * collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height) collectionViewLayout:flowLayout];
     collectionView.alwaysBounceVertical = YES;
     collectionView.backgroundColor = [UIColor grayColor];
@@ -54,7 +55,10 @@ static NSString * const CellID = @"CellID";
     
 }
 
-
+-(CGFloat)waterFlowLayout:(WaterFlowLayout *)flowLayout heightForWith:(CGFloat)width atIndexPath:(NSIndexPath *)indexPath{
+    ListDataModel * data = self.listData[indexPath.item];
+    return data.h / data.w * width;
+}
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.listData.count;
@@ -62,7 +66,7 @@ static NSString * const CellID = @"CellID";
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CollectionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellID forIndexPath:indexPath];
-    ListDataModel * data = self.listData[indexPath.row];
+    ListDataModel * data = self.listData[indexPath.item];
     [cell.imageView setImageWithURL:data.img];
     cell.subject.text = data.price;
     return cell;

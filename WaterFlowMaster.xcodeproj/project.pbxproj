@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1954451B94513800C95C30 /* CustomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1954441B94513800C95C30 /* CustomCollectionView.m */; };
+		AF1954491B9451FF00C95C30 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1954481B9451FF00C95C30 /* WaterFlowLayout.m */; };
+		AF19544D1B94524400C95C30 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19544B1B94524400C95C30 /* CollectionCell.m */; };
+		AF19544E1B94524400C95C30 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF19544C1B94524400C95C30 /* CollectionCell.xib */; };
+		AF1954541B94550E00C95C30 /* mogujie01.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF1954501B94550E00C95C30 /* mogujie01.plist */; };
+		AF1954551B94550E00C95C30 /* mogujie02.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF1954511B94550E00C95C30 /* mogujie02.plist */; };
+		AF1954561B94550E00C95C30 /* mogujie03.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF1954521B94550E00C95C30 /* mogujie03.plist */; };
+		AF1954571B94550E00C95C30 /* mogujie04.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF1954531B94550E00C95C30 /* mogujie04.plist */; };
 		AF33B2241B8ED4E500AF7F15 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33B2081B8ED4E500AF7F15 /* MKAnnotationView+WebCache.m */; };
 		AF33B2251B8ED4E500AF7F15 /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33B20A1B8ED4E500AF7F15 /* NSData+GIF.m */; };
 		AF33B2261B8ED4E500AF7F15 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33B20C1B8ED4E500AF7F15 /* SDImageCache.m */; };
@@ -46,6 +54,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1954431B94513800C95C30 /* CustomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionView.h; sourceTree = "<group>"; };
+		AF1954441B94513800C95C30 /* CustomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionView.m; sourceTree = "<group>"; };
+		AF1954471B9451FF00C95C30 /* WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
+		AF1954481B9451FF00C95C30 /* WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
+		AF19544A1B94524400C95C30 /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		AF19544B1B94524400C95C30 /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
+		AF19544C1B94524400C95C30 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		AF1954501B94550E00C95C30 /* mogujie01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mogujie01.plist; sourceTree = "<group>"; };
+		AF1954511B94550E00C95C30 /* mogujie02.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mogujie02.plist; sourceTree = "<group>"; };
+		AF1954521B94550E00C95C30 /* mogujie03.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mogujie03.plist; sourceTree = "<group>"; };
+		AF1954531B94550E00C95C30 /* mogujie04.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mogujie04.plist; sourceTree = "<group>"; };
 		AF33B2071B8ED4E500AF7F15 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		AF33B2081B8ED4E500AF7F15 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		AF33B2091B8ED4E500AF7F15 /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
@@ -117,9 +136,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1954461B94516900C95C30 /* Class2 */ = {
+			isa = PBXGroup;
+			children = (
+				AF1954431B94513800C95C30 /* CustomCollectionView.h */,
+				AF1954441B94513800C95C30 /* CustomCollectionView.m */,
+				AF1954471B9451FF00C95C30 /* WaterFlowLayout.h */,
+				AF1954481B9451FF00C95C30 /* WaterFlowLayout.m */,
+				AF19544A1B94524400C95C30 /* CollectionCell.h */,
+				AF19544B1B94524400C95C30 /* CollectionCell.m */,
+				AF19544C1B94524400C95C30 /* CollectionCell.xib */,
+			);
+			name = Class2;
+			sourceTree = "<group>";
+		};
 		AF33B2061B8ED4E500AF7F15 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				AF1954501B94550E00C95C30 /* mogujie01.plist */,
+				AF1954511B94550E00C95C30 /* mogujie02.plist */,
+				AF1954521B94550E00C95C30 /* mogujie03.plist */,
+				AF1954531B94550E00C95C30 /* mogujie04.plist */,
 				AF33B2071B8ED4E500AF7F15 /* MKAnnotationView+WebCache.h */,
 				AF33B2081B8ED4E500AF7F15 /* MKAnnotationView+WebCache.m */,
 				AF33B2091B8ED4E500AF7F15 /* NSData+GIF.h */,
@@ -153,14 +190,14 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		AF33B2321B8ED5D600AF7F15 /* Class */ = {
+		AF33B2321B8ED5D600AF7F15 /* Class1 */ = {
 			isa = PBXGroup;
 			children = (
 				AF33B2351B8ED5FD00AF7F15 /* Model */,
 				AF33B2341B8ED5F400AF7F15 /* View */,
 				AF33B2331B8ED5E300AF7F15 /* Controller */,
 			);
-			name = Class;
+			name = Class1;
 			sourceTree = "<group>";
 		};
 		AF33B2331B8ED5E300AF7F15 /* Controller */ = {
@@ -215,7 +252,8 @@
 		AFBA8AA11B8DAB2D007FA689 /* WaterFlowMaster */ = {
 			isa = PBXGroup;
 			children = (
-				AF33B2321B8ED5D600AF7F15 /* Class */,
+				AF1954461B94516900C95C30 /* Class2 */,
+				AF33B2321B8ED5D600AF7F15 /* Class1 */,
 				AFBA8AA61B8DAB2D007FA689 /* AppDelegate.h */,
 				AFBA8AA71B8DAB2D007FA689 /* AppDelegate.m */,
 				AFBA8AAC1B8DAB2D007FA689 /* Main.storyboard */,
@@ -334,10 +372,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1954541B94550E00C95C30 /* mogujie01.plist in Resources */,
+				AF19544E1B94524400C95C30 /* CollectionCell.xib in Resources */,
 				AFBA8AAE1B8DAB2D007FA689 /* Main.storyboard in Resources */,
 				AFBA8AD41B8DBA0C007FA689 /* mogujie00.plist in Resources */,
+				AF1954561B94550E00C95C30 /* mogujie03.plist in Resources */,
+				AF1954571B94550E00C95C30 /* mogujie04.plist in Resources */,
 				AFBA8AB31B8DAB2D007FA689 /* LaunchScreen.xib in Resources */,
 				AFBA8AB01B8DAB2D007FA689 /* Images.xcassets in Resources */,
+				AF1954551B94550E00C95C30 /* mogujie02.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +405,7 @@
 				AF33B22C1B8ED4E500AF7F15 /* SDWebImagePrefetcher.m in Sources */,
 				AFBA8AAB1B8DAB2D007FA689 /* ViewController.m in Sources */,
 				AF33B2241B8ED4E500AF7F15 /* MKAnnotationView+WebCache.m in Sources */,
+				AF1954451B94513800C95C30 /* CustomCollectionView.m in Sources */,
 				AF33B2301B8ED4E500AF7F15 /* UIImage+WebP.m in Sources */,
 				AFBA8AA81B8DAB2D007FA689 /* AppDelegate.m in Sources */,
 				AF33B22A1B8ED4E500AF7F15 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -369,9 +413,11 @@
 				AF33B2311B8ED4E500AF7F15 /* UIImageView+WebCache.m in Sources */,
 				AFBA8ACD1B8DABAB007FA689 /* WaterFlowView.m in Sources */,
 				AF33B2251B8ED4E500AF7F15 /* NSData+GIF.m in Sources */,
+				AF19544D1B94524400C95C30 /* CollectionCell.m in Sources */,
 				AF33B2291B8ED4E500AF7F15 /* SDWebImageDownloader.m in Sources */,
 				AFBA8AD01B8DABBA007FA689 /* WaterFlowCell.m in Sources */,
 				AFBA8ACA1B8DAB7B007FA689 /* WaterFlowViewController.m in Sources */,
+				AF1954491B9451FF00C95C30 /* WaterFlowLayout.m in Sources */,
 				AFBA8AA51B8DAB2D007FA689 /* main.m in Sources */,
 				AF33B22B1B8ED4E500AF7F15 /* SDWebImageManager.m in Sources */,
 				AFBA8AD71B8DBAC9007FA689 /* ListDataModel.m in Sources */,

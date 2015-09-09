@@ -24,7 +24,6 @@
 #pragma mark 查询可重用的单元格
 -(id) dequeueReusableCellWithIdentifier:(NSString*)identifier{
     WaterFlowCell * cell = [self.reusableCellSet anyObject];
-    
     if (cell) {
         [self.reusableCellSet removeObject:cell];
     }

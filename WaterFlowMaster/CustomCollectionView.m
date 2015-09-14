@@ -11,9 +11,12 @@
 #import "CollectionCell.h"
 #import "ListDataModel.h"
 #import "UIImageView+WebCache.h"
+#import "PhotoBowserViewController.h"
+#import "PhotoModel.h"
 @interface CustomCollectionView ()<UICollectionViewDataSource,UICollectionViewDelegate,WaterFlowLayoutDelegate>
 @property(nonatomic,strong)NSMutableArray * listData;
 @property(nonatomic,weak)UICollectionView * collectionView;
+@property(nonatomic,strong)WaterFlowLayout  * flowLayout;
 @end
 
 @implementation CustomCollectionView
@@ -40,6 +43,7 @@ static NSString * const CellID = @"CellID";
     [collectionView registerNib:[UINib nibWithNibName:@"CollectionCell" bundle:nil] forCellWithReuseIdentifier:CellID];
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
+    self.flowLayout = flowLayout;
     
     NSString * filePath = [[NSBundle mainBundle] pathForResource:@"mogujie02" ofType:@"plist"];
     NSDictionary * dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
@@ -70,6 +74,31 @@ static NSString * const CellID = @"CellID";
     [cell.imageView setImageWithURL:data.img];
     cell.subject.text = data.price;
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self showPhotoIndexPath:indexPath];
+    
+}
+
+-(void)showPhotoIndexPath:(NSIndexPath*)indexPath{
+    
+    PhotoBowserViewController * photoVC = [[PhotoBowserViewController alloc] init];
+    NSMutableArray * photoModelArray  = [NSMutableArray array];
+    for (int index = 0; index < self.listData.count; index++) {
+        ListDataModel * data = self.listData[index];
+        UICollectionViewLayoutAttributes * attri = self.flowLayout.layoutArrtbuteArray[index];
+        CGRect srcFrame = [self.collectionView convertRect:attri.frame toView:photoVC.view];
+        
+        PhotoModel * photoModel = [PhotoModel photoWihtURL:[NSString stringWithFormat:@"%@",data.img] index:index srcFrame:srcFrame];
+        [photoModelArray addObject:photoModel];
+    }
+    photoVC.imageArray = photoModelArray;
+    photoVC.currentIndex = indexPath.item;
+    [photoVC show];
+
+    
 }
 
 

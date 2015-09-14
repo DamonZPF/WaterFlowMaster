@@ -13,7 +13,7 @@
 
 @property(nonatomic,strong)NSMutableDictionary * maxYDict;//存储每一列的最大高度
 
-@property(nonatomic,strong)NSMutableArray * layoutArrtbuteArray;
+
 @end
 
 @implementation WaterFlowLayout

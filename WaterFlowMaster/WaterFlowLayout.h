@@ -18,5 +18,6 @@
 @property(nonatomic,assign)CGFloat columnMargin;
 @property(nonatomic,assign)CGFloat rowMargin;
 @property(nonatomic,assign)NSInteger columnCount;
+@property(nonatomic,strong)NSMutableArray * layoutArrtbuteArray;
 @property(nonatomic,weak)id <WaterFlowLayoutDelegate> delegate;
 @end

@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"mogujie00" ofType:@"plist"];
+    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"mogujie01" ofType:@"plist"];
     NSDictionary * dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
   
     NSMutableArray * arr = dict[@"result"][@"list"];
